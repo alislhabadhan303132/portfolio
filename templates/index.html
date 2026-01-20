@@ -2,55 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
+<!-- ===== HERO SECTION ===== -->
 <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-        <img src="{{ url_for('static', filename='css/images/pipo.jpeg') }}" alt="Profile Image" class="profile-img">
+        <img src="{{ url_for('static', filename='css/images/pipo.jpeg') }}"
+             alt="Profile Image"
+             class="profile-img">
+
         <h1>Hi, I'm <span>Alisha</span> 👋</h1>
-        <p class="typing"></p>
+        <p class="typing">Python | Flask | Web Developer</p>
         <button onclick="scrollToSection()">View My Work</button>
     </div>
 </header>
 
+<!-- ===== ABOUT ===== -->
 <section class="container" id="about">
     <h2>About Me</h2>
-    <p>
-        I'm a passionate Python & Flask web developer who loves building
-        clean, responsive, and user-friendly applications.
-    </p>
-</section>
-
-<section class="container skills">
-    <h2>Skills</h2>
-    <div class="skill-box">Python</div>
-    <div class="skill-box">Flask</div>
-    <div class="skill-box">HTML</div>
-    <div class="skill-box">CSS</div>
-    <div class="skill-box">JavaScript</div>
-</section>
-
-<footer>
-    <p>© 2026 Alisha | Built with ❤️</p>
-</footer>
-
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
-
-<section class="container">
-    <h2>About Me</h2><
     <p>
         I am a passionate fresher looking for opportunities to apply my skills
         in Python, Flask, HTML5, and CSS to build real-world applications.
     </p>
 </section>
 
-<section class="container">
+<!-- ===== EDUCATION ===== -->
+<section class="container" id="education">
     <h2>Education</h2>
     <ul>
         <li>Bachelor's Degree – Computer Science</li>
@@ -59,32 +42,41 @@
     </ul>
 </section>
 
-<section class="container">
+<!-- ===== SKILLS ===== -->
+<section class="container" id="skills">
     <h2>Technical Skills</h2>
     <div class="skills">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Python</span>
-        <span>Flask</span>
-        <span>Git</span>
+        <span class="skill-box">HTML5</span>
+        <span class="skill-box">CSS3</span>
+        <span class="skill-box">Python</span>
+        <span class="skill-box">Flask</span>
+        <span class="skill-box">Git</span>
+        <span class="skill-box">JavaScript</span>
     </div>
 </section>
 
-<section class="container">
+<!-- ===== PROJECTS ===== -->
+<section class="container" id="projects">
     <h2>Projects</h2>
     <div class="project">
         <h3>Portfolio Website</h3>
-        <p>Built using Flask, HTML, and CSS to showcase my skills and projects.</p>
+        <p>
+            Built using Flask, HTML, CSS, and JavaScript to showcase
+            my skills and projects.
+        </p>
     </div>
 </section>
 
+<!-- ===== IMAGE SECTION ===== -->
 <section class="container">
     <h2>Portfolio Requirements</h2>
     <img src="{{ url_for('static', filename='images/portfolio-requirements.jpg') }}"
-         alt="Portfolio Requirements" class="content-img">
+         alt="Portfolio Requirements"
+         class="content-img">
 </section>
 
-<section class="container">
+<!-- ===== CONTACT ===== -->
+<section class="container" id="contact">
     <h2>Contact</h2>
     <p>Email: yourname@email.com</p>
     <p>
@@ -93,9 +85,13 @@
     </p>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-    <p>© 2026 My Portfolio</p>
+    <p>© 2026 Alisha | Built with ❤️</p>
 </footer>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>
