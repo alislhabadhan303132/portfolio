@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Hi, I'm a alisha 👋</h1>
+    <p>Python | Flask | Web Developer</p>
+</header>
+
+<section class="container">
+    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image" class="profile-img">
+</section>
+
+<section class="container">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate fresher looking for opportunities to apply my skills
+        in Python, Flask, HTML5, and CSS to build real-world applications.
+    </p>
+</section>
+
+<section class="container">
+    <h2>Education</h2>
+    <ul>
+        <li>Bachelor's Degree – Computer Science</li>
+        <li>Specialization: Web Development</li>
+        <li>Year: 2026</li>
+    </ul>
+</section>
+
+<section class="container">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Python</span>
+        <span>Flask</span>
+        <span>Git</span>
+    </div>
+</section>
+
+<section class="container">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Built using Flask, HTML, and CSS to showcase my skills and projects.</p>
+    </div>
+</section>
+
+<section class="container">
+    <h2>Portfolio Requirements</h2>
+    <img src="{{ url_for('static', filename='images/portfolio-requirements.jpg') }}"
+         alt="Portfolio Requirements" class="content-img">
+</section>
+
+<section class="container">
+    <h2>Contact</h2>
+    <p>Email: yourname@email.com</p>
+    <p>
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio</p>
+</footer>
+
+</body>
+</html>
