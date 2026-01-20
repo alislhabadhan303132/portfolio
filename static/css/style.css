@@ -56,3 +56,116 @@ footer {
     background: #1e293b;
     color: white;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 50vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero span {
+    color: #ffd369;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    transition: transform 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: #ffd369;
+    color: #333;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: white;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #764ba2;
+}
+
+.container p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.skill-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    background: #667eea;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
