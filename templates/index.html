@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Alisha | Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
 <!-- ===== HERO SECTION ===== -->
 <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <img src="{{ url_for('static', filename='css/images/pipo.jpeg') }}"
-             alt="Profile Image"
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate">
+        <img src="{{ url_for('static', filename='css/images/alisha.jpeg') }}" 
+             alt="Alisha Profile" 
              class="profile-img">
-
-        <h1>Hi, I'm <span>Alisha</span> 👋</h1>
-        <p class="typing">Python | Flask | Web Developer</p>
-        <button onclick="scrollToSection()">View My Work</button>
+        <h1>Hi, I'm <span>Alisha</span></h1>
+        <p class="typing" id="typing">Python | Flask | Web Developer</p>
+        <button class="btn-primary" onclick="scrollToSection('about')">View My Work</button>
     </div>
 </header>
 
 <!-- ===== ABOUT ===== -->
-<section class="container" id="about">
+<section class="section fade-in" id="about">
     <h2>About Me</h2>
     <p>
-        I am a passionate fresher looking for opportunities to apply my skills
-        in Python, Flask, HTML5, and CSS to build real-world applications.
+        I am a passionate Python & Flask developer who builds clean,
+        modern, and responsive web applications. I enjoy solving problems
+        and learning new technologies.
     </p>
 </section>
 
 <!-- ===== EDUCATION ===== -->
-<section class="container" id="education">
+<section class="section fade-in" id="education">
     <h2>Education</h2>
     <ul>
         <li>Bachelor's Degree – Computer Science</li>
@@ -43,46 +42,45 @@
 </section>
 
 <!-- ===== SKILLS ===== -->
-<section class="container" id="skills">
+<section class="section fade-in" id="skills">
     <h2>Technical Skills</h2>
     <div class="skills">
-        <span class="skill-box">HTML5</span>
-        <span class="skill-box">CSS3</span>
-        <span class="skill-box">Python</span>
-        <span class="skill-box">Flask</span>
-        <span class="skill-box">Git</span>
-        <span class="skill-box">JavaScript</span>
+        <span class="skill-box hover-float">Python</span>
+        <span class="skill-box hover-float">Flask</span>
+        <span class="skill-box hover-float">HTML5</span>
+        <span class="skill-box hover-float">CSS3</span>
+        <span class="skill-box hover-float">JavaScript</span>
+        <span class="skill-box hover-float">Git</span>
     </div>
 </section>
 
 <!-- ===== PROJECTS ===== -->
-<section class="container" id="projects">
+<section class="section fade-in" id="projects">
     <h2>Projects</h2>
-    <div class="project">
+    <div class="project-card hover-lift">
         <h3>Portfolio Website</h3>
         <p>
-            Built using Flask, HTML, CSS, and JavaScript to showcase
-            my skills and projects.
+            Built using Flask, HTML, CSS, and JavaScript to showcase my skills
+            and projects in a visually appealing, responsive layout.
+        </p>
+    </div>
+    <div class="project-card hover-lift">
+        <h3>Blog App</h3>
+        <p>
+            A full-stack Flask blog application with authentication,
+            CRUD operations, and responsive design.
         </p>
     </div>
 </section>
 
-<!-- ===== IMAGE SECTION ===== -->
-<section class="container">
-    <h2>Portfolio Requirements</h2>
-    <img src="{{ url_for('static', filename='images/portfolio-requirements.jpg') }}"
-         alt="Portfolio Requirements"
-         class="content-img">
-</section>
-
 <!-- ===== CONTACT ===== -->
-<section class="container" id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>
-        <a href="#">GitHub</a> |
-        <a href="#">LinkedIn</a>
-    </p>
+<section class="section fade-in" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:alislhabadhan303132@email.com">alislhabadhan303132@email.com</a></p>
+    <div class="social-links">
+        <a href="#" class="btn-outline hover-float">GitHub</a>
+        <a href="#" class="btn-outline hover-float">LinkedIn</a>
+    </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
@@ -92,6 +90,5 @@
 
 <!-- JS -->
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
 </body>
 </html>

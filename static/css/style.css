@@ -1,171 +1,223 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
-    color: #333;
-}
-
-header {
-    background: #1e293b;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-
-.container {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.profile-img {
-    width: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-}
-
-.content-img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 15px auto;
-}
-
-.skills span {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-.project {
-    background: #f1f5f9;
-    padding: 15px;
-    border-left: 5px solid #2563eb;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #1e293b;
-    color: white;
-}
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
+/* ===== BODY ===== */
 body {
-    background: #f4f6f9;
-    color: #333;
-}
-
-/* HERO SECTION */
-.hero {
-    height: 50vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.hero-content {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;   /* Almost pure black */
+    color: #d4af37;              /* Golden text */
     text-align: center;
-    color: white;
-    z-index: 2;
-}
-
-.hero span {
-    color: #ffd369;
-}
-
-.profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 20px;
-    transition: transform 0.4s;
-}
-
-.profile-img:hover {
-    transform: scale(1.1);
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin: 15px 0;
-}
-
-.hero button {
-    padding: 12px 25px;
-    border: none;
-    background: #ffd369;
-    color: #333;
-    font-size: 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.hero button:hover {
-    background: white;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.container h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #764ba2;
-}
-
-.container p {
-    font-size: 1.1rem;
     line-height: 1.7;
 }
 
-/* SKILLS */
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #4b3b00); /* Dark charcoal to rich gold gradient */
+    color: #f8f1d4; /* Light golden text */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    padding: 20px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.hero-content.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f8f1d4; /* Light golden */
+}
+
+.hero h1 span {
+    color: #d4af37; /* Gold accent */
+}
+
+.typing {
+    font-size: 1.3rem;
+    margin: 20px 0 30px;
+    color: #e6d680; /* Softer golden */
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #d4af37; /* Golden border */
+    margin: 0 auto 24px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5); /* Soft golden glow */
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background: #d4af37; /* Gold */
+    color: #0a0a0a;      /* Black text */
+    border: none;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px #d4af37;
+}
+
+.btn-primary:hover {
+    background: #b38f1a; /* Darker gold */
+    box-shadow: 0 0 20px #b38f1a;
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn-outline {
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.btn-outline:hover {
+    background: #d4af37;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #d4af37;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    max-width: 900px;
+    margin: 90px auto;
+    padding: 40px 24px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+    background-color: #1a1a1a; /* Dark charcoal */
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.25);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #d4af37; /* Gold headings */
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #d4af37; /* Gold underline */
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+.section p,
+.section li {
+    color: #cfc497; /* Light gold text */
+    font-size: 1.05rem;
+    margin: 12px 0;
+}
+
+/* ===== SKILLS ===== */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
 }
 
 .skill-box {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    background: #2a2a2a; /* Very dark gray */
+    color: #d4af37;      /* Gold text */
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid #d4af37;
 }
 
-.skill-box:hover {
-    transform: translateY(-8px);
-    background: #667eea;
-    color: white;
+.hover-float:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0 15px #d4af37;
 }
 
-/* FOOTER */
+/* ===== PROJECTS ===== */
+.project-card {
+    background: #2a2a2a; /* Dark background */
+    color: #d4af37;
+    padding: 28px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 14px 36px rgba(212, 175, 55, 0.3);
+    border-top: 4px solid #d4af37;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 48px rgba(212, 175, 55, 0.5);
+}
+
+/* ===== CONTACT ===== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
+    background: #0a0a0a; /* Pure black */
+    color: #d4af37;      /* Golden text */
+    padding: 20px;
+    font-size: 0.95rem;
 }
-
