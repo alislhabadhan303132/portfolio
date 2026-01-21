@@ -221,3 +221,20 @@ footer {
     padding: 20px;
     font-size: 0.95rem;
 }
+
+.btn-resume {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: #ff4757;
+    transform: translateY(-2px);
+}

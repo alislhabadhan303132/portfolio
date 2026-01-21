@@ -15,9 +15,15 @@
         <img src="{{ url_for('static', filename='css/images/alisha.jpeg') }}" 
              alt="Alisha Profile" 
              class="profile-img">
+
         <h1>Hi, I'm <span>Alisha</span></h1>
         <p class="typing" id="typing">Python | Flask | Web Developer</p>
-        <button class="btn-primary" onclick="scrollToSection('about')">View My Work</button>
+
+        <a href="{{ url_for('static', filename='resume/ali_resume.pdf') }}"
+           class="btn-resume"
+           download>
+            Download Resume
+        </a>
     </div>
 </header>
 
